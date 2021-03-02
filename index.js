@@ -165,8 +165,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         document.getElementById("oneTitle").innerHTML = "The title is: " + songArray[idx].Song;
         document.getElementById("oneArtist").innerHTML = "The Artist is: " + songArray[idx].Artist;
         document.getElementById("oneAlbum").innerHTML = "The Album is: " + songArray[idx].Album;
-        document.getElementById("oneGenre").innerHTML = "The Album is: " + songArray[idx].Genre;
-        document.getElementById("oneYear").innerHTML = "The Album is: " + songArray[idx].Year;
+        document.getElementById("oneGenre").innerHTML = "The Genre is: " + songArray[idx].Genre;
+        document.getElementById("oneYear").innerHTML = "The Release Year is: " + songArray[idx].Year;
     });
 
     // end of page before show code *************************************************************************

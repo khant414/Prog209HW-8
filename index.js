@@ -3,7 +3,7 @@ let songArray = [];
 
 // define a SongObject Constructor
 let SongObject = function (pSong, pArtist, pAlbum, pGenre ,pYear, pSpotify, pYoutube) {
-    this.ID = movieArray.length + 1;;
+    this.ID = songArray.length + 1;;
     this.Song = pSong;
     this.Artist = pArtist;
     this.Album = pAlbum;
@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("buttonAdd").addEventListener("click", function () {
     songArray.push(new SongObject(document.getElementById("song").value, document.getElementById("artist").value,
         document.getElementById("album").value, document.getElementById("genre").value, document.getElementById("year").value, document.getElementById("youtube").value, document.getElementById("spotify").value));
-    document.location.href = "index.html#ListAll";
+    document.location.href = "index.html#ListMusic";
     });
-    
-    ocument.getElementById("buttonClear").addEventListener("click", function () {
+    //Button to clear Music Values in Input form
+    document.getElementById("buttonClear").addEventListener("click", function () {
     document.getElementById("song").value = "";
     document.getElementById("artist").value = "";
     document.getElementById("album").value = "";
@@ -46,20 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("delete").addEventListener("click", function () {
         deleteMovie(document.getElementById("IDparmHere").innerHTML);
         createList();  // recreate li list after removing one
-        document.location.href = "index.html#ListAll";  // go back to movie list 
+        document.location.href = "index.html#ListMusic";  // go back to movie list 
     });
 
 // 2 sort button event methods
     document.getElementById("buttonSortTitle").addEventListener("click", function () {
         movieArray.sort(dynamicSort("Title"));
         createList();
-        document.location.href = "index.html#ListAll";
+        document.location.href = "index.html#ListMusic";
     });
 
     document.getElementById("buttonSortGenre").addEventListener("click", function () {
         movieArray.sort(dynamicSort("Genre"));
         createList();
-        document.location.href = "index.html#ListAll";
+        document.location.href = "index.html#ListMusic";
     });
 
     // button on details page to view the youtube video
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 // page before show code *************************************************************************
     // page before show code *************************************************************************
-    $(document).on("pagebeforeshow", "#ListAll", function (event) {   // have to use jQuery 
+    $(document).on("pagebeforeshow", "#ListMusic", function (event) {   // have to use jQuery 
         createList();
     });
 
@@ -119,24 +119,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function createList() {
     // clear prior data
-    var divMovieList = document.getElementById("divMovieList");
-    while (divMovieList.firstChild) {    // remove any old data so don't get duplicates
-        divMovieList.removeChild(divMovieList.firstChild);
+    let divMusic = document.getElementById("divMusic");
+    while (divMusic.firstChild) {    // remove any old data so don't get duplicates
+        divMusic.removeChild(divMusic.firstChild);
     };
 
-    var ul = document.createElement('ul');
+    let ul = document.createElement('ul');
 
-    movieArray.forEach(function (element,) {   // use handy array forEach method
+    songArray.forEach(function (element,) {   // use handy array forEach method
         var li = document.createElement('li');
         // adding a class name to each one as a way of creating a collection
-        li.classList.add('oneMovie'); 
+        li.classList.add('oneMusic'); 
         // use the html5 "data-parm" to encode the ID of this particular data object
         // that we are building an li from
         li.setAttribute("data-parm", element.ID);
-        li.innerHTML = element.ID + ":  " + element.Title + "  " + element.Genre;
+        li.innerHTML = element.ID + ":  " + element.Song + "  " + element.Genre + " " + element.Album;
         ul.appendChild(li);
     });
-    divMovieList.appendChild(ul)
+    divMusic.appendChild(ul)
 
     // now we have the HTML done to display out list, 
     // next we make them active buttons
@@ -180,7 +180,7 @@ function createListSubset(whichType) {
 
     var ul = document.createElement('ul');
 
-    movieArray.forEach(function (element,) {
+    songArray.forEach(function (element,) {
         
         if (element.Genre === whichType) {
             // use handy array forEach method

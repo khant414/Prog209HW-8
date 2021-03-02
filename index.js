@@ -119,8 +119,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         });
 
     // button on details page to view the youtube video
-    document.getElementById("trailer").addEventListener("click", function () {
-        window.open(document.getElementById("oneURL").innerHTML);
+    document.getElementById("youtubeButton").addEventListener("click", function () {
+        window.open(document.getElementById("oneYoutube").innerHTML);
+    });
+
+    document.getElementById("spotify").addEventListener("click", function () {
+        window.open(document.getElementById("oneSpotify").innerHTML);
     });
 
     document

@@ -28,9 +28,9 @@
       <!--Home Navbar -->
       <div data-role="navbar" data-theme='b' id="nav_bar">
         <ul>
-        <li><a href="#home" class='active-page'>Home Page</a></li>
-        <li><a href="#Load">Add a Song</a></li>
-        <li><a href="#ListMusic">List All Music</a></li>
+        <li><a href="#home" class='active-page' data-icon="home">Home Page</a></li>
+        <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+        <li><a href="#ListMusic" data-icon ="grid">List All Music</a></li>
         </ul>
       </div>
       <div class="myHeader">Organize your favorite Music</div>
@@ -61,9 +61,9 @@
       <h1>Add a Song</h1>
       <div data-role="navbar" data-theme='b' id="nav_bar">
         <ul>
-          <li><a href="#home">Home Page</a></li>
-          <li><a href="#Load" class='active-page'>Add a Song</a></li>
-          <li><a href="#ListMusic">List Your Music</a></li>
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus" class='active-page'>Add a Song</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List Your Music</a></li>
           
         </ul>
       </div><!-- /navbar -->
@@ -113,9 +113,9 @@
       <h1>Music List</h1>
       <div data-role="navbar" data-theme='b' id="nav_bar">
         <ul>
-        <li><a href="#home">Home Page</a></li>
-        <li><a href="#Load">Add a Song</a></li>
-        <li><a href="#ListMusic" class='active-page' >List Your Music</a></li>
+        <li><a href="#home" data-icon="home">Home Page</a></li>
+        <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+        <li><a href="#ListMusic" class='active-page' data-icon="grid" >List Your Music</a></li>
         
          
         </ul>
@@ -149,11 +149,9 @@
       <h1>My Music</h1>
       <div data-role="navbar" data-theme='b'>
         <ul>
-          <li><a href="#home">Home Page</a></li>
-          <li><a href="#Load">Add a Song</a></li>
-          <li><a href="#ListMusic">List Your Music</a></li>
-          
-  
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus">Add a Song</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List Your Music</a></li>
         </ul>
       </div><!-- /navbar -->
             <div class="myHeader"> Musics.</div>
@@ -168,9 +166,8 @@
       <p id="oneAlbum"></p>
       <p id="oneGenre"></p>
       <p id="oneYear"></p>
-      <p id="oneSpotify" hidden></p>
-      <p id="oneYoutube" hidden></p>
-      <input type="button" value="Youtube" id="trailer" />
+      <p id="oneURL" hidden></p>
+      <input type="button" value="Trailer" id="trailer" />
     </div>
     <input type="button" value="Delete" id="delete" style="background: rgb(216, 11, 11)"/>
 
@@ -191,9 +188,9 @@
       <h1>Music List By Genre</h1>
       <div data-role="navbar" data-theme='b' id="nav_bar">
         <ul>
-          <li><a href="#home">Home Page</a></li>
-          <li><a href="#Load">Add Music</a></li>
-          <li><a href="#ListMusic">List All Music</a></li>
+          <li><a href="#home" data-icon="home">Home Page</a></li>
+          <li><a href="#Load" data-icon="plus">Add Music</a></li>
+          <li><a href="#ListMusic" data-icon="grid">List All Music</a></li>
         </ul>
       </div><!-- /navbar -->
         <div class="myHeader"> Favorite Music</div>
@@ -218,7 +215,7 @@
 
 
 
-  <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+  <p id="IDparmHere" hidden></p>  <!--hidden, a place to stash the user ID -->
 </body>
 
 </html>

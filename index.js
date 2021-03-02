@@ -38,7 +38,7 @@ songArray.push(
     new SongObject(
         "Dirty Deeds Done Dirt Cheap",
         "ACDC",
-        "Dirty Deeds Done For Cheap",
+        "Dirty Deeds Done Dirt Cheap",
         "Rock",
         1976,
         "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g",
@@ -50,7 +50,7 @@ songArray.push(
     new SongObject(
         "Dirty Deeds Done Dirt Cheap",
         "ACDC",
-        "Dirty Deeds Done For Cheap",
+        "Dirty Deeds Done Dirt Cheap",
         "Rock",
         1976,
         "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g",
@@ -162,8 +162,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         console.log(localID);
         let idx = GetArrayPointer(localID);
 
-        document.getElementById("oneTitle").innerHTML =
-            "The title is: " + songArray[idx].Song;
+        document.getElementById("oneTitle").innerHTML = "The title is: " + songArray[idx].Song;
+        document.getElementById("oneArtist").innerHTML = "The Artist is: " + songArray[idx].Artist;
+        document.getElementById("oneAlbum").innerHTML = "The Album is: " + songArray[idx].Album;
+        document.getElementById("oneGenre").innerHTML = "The Album is: " + songArray[idx].Genre;
+        document.getElementById("oneYear").innerHTML = "The Album is: " + songArray[idx].Year;
     });
 
     // end of page before show code *************************************************************************

@@ -119,13 +119,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
         });
 
     // button on details page to view the youtube video
-    document.getElementById("youtubeButton").addEventListener("click", function () {
-        window.open(document.getElementById("oneYoutube").innerHTML);
-    });
+    document
+        .getElementById("openYoutube")
+        .addEventListener("click", function () {
+            window.open(document.getElementById("oneYoutube").innerHTML);
+        });
 
-    document.getElementById("spotify").addEventListener("click", function () {
-        window.open(document.getElementById("oneSpotify").innerHTML);
-    });
+    document
+        .getElementById("openSpotify")
+        .addEventListener("click", function () {
+            window.open(document.getElementById("oneSpotify").innerHTML);
+        });
 
     document
         .getElementById("buttonSubsetComedy")
@@ -166,11 +170,20 @@ document.addEventListener("DOMContentLoaded", function (e) {
         console.log(localID);
         let idx = GetArrayPointer(localID);
 
-        document.getElementById("oneTitle").innerHTML = "The title is: " + songArray[idx].Song;
-        document.getElementById("oneArtist").innerHTML = "The Artist is: " + songArray[idx].Artist;
-        document.getElementById("oneAlbum").innerHTML = "The Album is: " + songArray[idx].Album;
-        document.getElementById("oneGenre").innerHTML = "The Genre is: " + songArray[idx].Genre;
-        document.getElementById("oneYear").innerHTML = "The Release Year is: " + songArray[idx].Year;
+        document.getElementById("oneTitle").innerHTML =
+            "The title is: " + songArray[idx].Song;
+        document.getElementById("oneArtist").innerHTML =
+            "The Artist is: " + songArray[idx].Artist;
+        document.getElementById("oneAlbum").innerHTML =
+            "The Album is: " + songArray[idx].Album;
+        document.getElementById("oneGenre").innerHTML =
+            "The Genre is: " + songArray[idx].Genre;
+        document.getElementById("oneYear").innerHTML =
+            "The Release Year is: " + songArray[idx].Year;
+        document.getElementById("oneYoutube").innerHTML =
+            songArray[idx].YoutubeURL;
+        document.getElementById("oneSpotify").innerHTML =
+            songArray[idx].SpotifyURL;
     });
 
     // end of page before show code *************************************************************************

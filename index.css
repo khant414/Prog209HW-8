@@ -1,37 +1,64 @@
+body {
+    width: 75%;
+}
+
+i {
+    padding: 0 0.5em;
+}
+
 h1 {
-  color: rgb(221, 7, 7);
+    color: rgb(221, 7, 7);
 }
 
 li {
-  color: rgb(221, 7, 7);
-  font-size:      25px;
-  font-weight:    bold;
+    color: rgb(221, 7, 7);
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .myHeader {
-  text-align: center;
-  font-size:      30px;
-  font-weight:    bold;
-  color:  rgb(221, 7, 7);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(221, 7, 7);
 }
 
 .newFont {
-  text-align: center;
-  font-family: 'Stick', sans-serif;
-  font-size: 22px;
-  font-size:      40px;
-  font-weight:    bold;
-  color:  rgb(221, 7, 7);
+    text-align: center;
+    font-family: "Stick", sans-serif;
+    font-size: 22px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(221, 7, 7);
 }
 
 .center {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 }
 
-#nav_bar ul li a.active-page
-{
-  background-color:rgb(255, 108, 108);
+#nav_bar ul li a.active-page {
+    background-color: rgb(255, 108, 108);
+}
+
+.body {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+}
+
+.details {
+    text-align: center;
+    margin: auto;
+}
+
+.red {
+    color: red;
+}
+
+.body ul {
+    list-style: none;
 }

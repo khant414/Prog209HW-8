@@ -123,7 +123,7 @@
       <img class="center" id="image1" src="./images/Music.jpg" alt="nomusicnolifepicture"" class="center">
     </div>
     <!--   page content -->
-    <div data-role="content" data-theme='e'>
+    <div data-role="content" data-theme='e' class = "body">
       <p>Your Music</p>
       <div id="divMusic"></div>
       <input type="button" value="Sort By Genre" id="buttonSortGenre" data-inline="true" />
@@ -158,15 +158,15 @@
     </div>
   
     <!--  content -->
-    <div data-role="content" data-theme='c'>
-      <p> Here are the details</p>
-      <p id="oneTitle"></p>
-      <p id="oneArtist"></p>
-      <p id="oneAlbum"></p>
-      <p id="oneGenre"></p>
-      <p id="oneYear"></p>
-      <p id = "oneYoutube" hidden></p>
-      <p id = "oneSpotify" hidden></p>
+    <div data-role="content" data-theme='c' class = "details">
+      <h2> Here are the details</h2>
+      <p class = "red">Song Name: </p><span id="oneTitle"></span></p>
+      <p class = "red">Artist: </p><span id="oneArtist"></span></p>
+      <p class = "red">Album: </p><span id="oneAlbum"></span></p>
+      <p class = "red">Genre: </p><span id="oneGenre"></span></p>
+      <p class = "red">Release Year: </p><span id="oneYear"></span><p></p>
+      <span id = "oneYoutube" hidden></span>
+      <span id = "oneSpotify" hidden></span>
       <!-- <p id="oneYoutube" hidden></p> -->
       <!-- <p id="oneSpotify" hidden></p> -->
       <i class="fab fa-youtube fa-3x " id = "openSpotify"></i>

@@ -29,32 +29,20 @@ songArray.push(
         "Dirty Deeds Done For Cheap",
         "Rock",
         1976,
-        "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g",
-        "https://www.youtube.com/watch?v=UIE4UjBtx-o"
+        "https://www.youtube.com/watch?v=UIE4UjBtx-o",
+        "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g"
     )
 );
 
 songArray.push(
     new SongObject(
-        "Dirty Deeds Done Dirt Cheap",
-        "ACDC",
-        "Dirty Deeds Done Dirt Cheap",
-        "Rock",
-        1976,
-        "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g",
-        "https://www.youtube.com/watch?v=UIE4UjBtx-o"
-    )
-);
-
-songArray.push(
-    new SongObject(
-        "Dirty Deeds Done Dirt Cheap",
-        "ACDC",
-        "Dirty Deeds Done Dirt Cheap",
-        "Rock",
-        1976,
-        "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT?si=EzQFFb_CSO2bA8DzrNM77g",
-        "https://www.youtube.com/watch?v=UIE4UjBtx-o"
+        "Slow Dancing in the Dark",
+        "Joji",
+        "BALLADS 1",
+        "Hip Hop",
+        2018,
+        "https://www.youtube.com/watch?v=K3Qzzggn--s",
+        "https://open.spotify.com/track/0rKtyWc8bvkriBthvHKY8d?si=sK2Qf_F0QoKcyVfF5P2MFA"
     )
 );
 
@@ -170,16 +158,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         console.log(localID);
         let idx = GetArrayPointer(localID);
 
-        document.getElementById("oneTitle").innerHTML =
-            "The title is: " + songArray[idx].Song;
-        document.getElementById("oneArtist").innerHTML =
-            "The Artist is: " + songArray[idx].Artist;
-        document.getElementById("oneAlbum").innerHTML =
-            "The Album is: " + songArray[idx].Album;
-        document.getElementById("oneGenre").innerHTML =
-            "The Genre is: " + songArray[idx].Genre;
-        document.getElementById("oneYear").innerHTML =
-            "The Release Year is: " + songArray[idx].Year;
+        document.getElementById("oneTitle").innerHTML = songArray[idx].Song;
+        document.getElementById("oneArtist").innerHTML = songArray[idx].Artist;
+        document.getElementById("oneAlbum").innerHTML = songArray[idx].Album;
+        document.getElementById("oneGenre").innerHTML = songArray[idx].Genre;
+        document.getElementById("oneYear").innerHTML = songArray[idx].Year;
         document.getElementById("oneYoutube").innerHTML =
             songArray[idx].YoutubeURL;
         document.getElementById("oneSpotify").innerHTML =

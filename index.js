@@ -3,7 +3,7 @@ let songArray = [];
 let param = null;
 
 // define a SongObject Constructor
-let SongObject = function (
+const SongObject = function (
     pSong,
     pArtist,
     pAlbum,
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document
         .getElementById("buttonSortTitle")
         .addEventListener("click", function () {
-            movieArray.sort(dynamicSort("Title"));
+            songArray.sort(dynamicSort("Song"));
             createList();
             document.location.href = "index.html#ListMusic";
         });
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document
         .getElementById("buttonSortGenre")
         .addEventListener("click", function () {
-            movieArray.sort(dynamicSort("Genre"));
+            songArray.sort(dynamicSort("Genre"));
             createList();
             document.location.href = "index.html#ListMusic";
         });
@@ -215,10 +215,13 @@ function createList() {
         li.innerHTML =
             element.ID +
             ":  " +
+            " Song Name: " +
             element.Song +
-            "  " +
+            ",  " +
+            " Genre: " +
             element.Genre +
-            " " +
+            ", " +
+            " Album: " +
             element.Album;
         ul.appendChild(li);
     });
@@ -310,6 +313,7 @@ function createListSubset(whichType) {
  * @param {String} property Key of the object to sort.
  */
 function dynamicSort(property) {
+    console.log(property);
     var sortOrder = 1;
 
     if (property[0] === "-") {

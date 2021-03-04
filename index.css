@@ -10,17 +10,55 @@ h1 {
     color: rgb(221, 7, 7);
 }
 
+
+/* ul {
+    align-items:baseline;
+    
+}
 li {
     color: rgb(221, 7, 7);
-    font-size: 25px;
+    
     font-weight: bold;
+    
+    
+} */
+
+#divMusic
+{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 200px;
+    background-color: rgb(255, 108, 108);
+    display: table;
+}
+#divMusic UL
+{
+    list-style:none;
+    display: table;
+    vertical-align: middle;
+    text-align: left;
+    
+}
+#divMusic LI
+{
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: list-item;
+    background-color: #CCC;
+    margin: 2px 2px 6px;
+    height: 100px;
 }
 
+
 .myHeader {
+    font-family: "Stick", sans-serif;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color: rgb(221, 7, 7);
+    color: red;
 }
 
 .newFont {
@@ -59,6 +97,6 @@ li {
     color: red;
 }
 
-.body ul {
+/* .body ul {
     list-style: none;
-}
+} */

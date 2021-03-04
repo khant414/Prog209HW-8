@@ -26,7 +26,7 @@ songArray.push(
     new SongObject(
         "Dirty Deeds Done Dirt Cheap",
         "ACDC",
-        "Dirty Deeds Done For Cheap",
+        "Dirty Deeds",
         "Rock",
         1976,
         "https://www.youtube.com/watch?v=UIE4UjBtx-o",
@@ -36,6 +36,39 @@ songArray.push(
 
 songArray.push(
     new SongObject(
+        "Solitude",
+        "Black Sabath",
+        "Masters Of Reality",
+        "Rock",
+        1971,
+        "https://www.youtube.com/watch?v=vmV8niW5GXs",
+        "https://open.spotify.com/track/0wjptUxT1jhKZ3Xm4lX8OF?si=jH-n0eCQTIWUBVPfcuEFTw"
+    )
+);
+songArray.push(
+    new SongObject(
+        "Straight Through The Heart",
+        "Dio",
+        "Holy Diver",
+        "Rock",
+        1983,
+        "https://www.youtube.com/watch?v=4vDjoLOAA6k",
+        "https://open.spotify.com/track/1dlBMzm6CqwQIUQ8PbT3NP?si=DzMnM4TkSySgcwIiJSxxsw"
+    )
+);
+songArray.push(
+    new SongObject(
+        "Tribute",
+        "Tenacious D",
+        "Tenacious D",
+        "Rock",
+        2001,
+        "https://www.youtube.com/watch?v=_lK4cX5xGiQ",
+        "https://open.spotify.com/track/6crBy2sODw2HS53xquM6us?si=rEPTfIqIQlqbygcxgyFZVA"
+    )
+);
+songArray.push(
+    new SongObject(
         "Slow Dancing in the Dark",
         "Joji",
         "BALLADS 1",
@@ -43,6 +76,29 @@ songArray.push(
         2018,
         "https://www.youtube.com/watch?v=K3Qzzggn--s",
         "https://open.spotify.com/track/0rKtyWc8bvkriBthvHKY8d?si=sK2Qf_F0QoKcyVfF5P2MFA"
+    )
+);
+songArray.push(
+    new SongObject(
+        "Dean Town",
+        "Vulfpeck",
+        "The Beautiful Game",
+        "Funk",
+        2016,
+        "https://www.youtube.com/watch?v=le0BLAEO93g",
+        "https://open.spotify.com/track/1oOD1pV43cV9sHg97aBdLs?si=wEqbmvbET1WNxu6FEmXHXA"
+    )
+);
+
+songArray.push(
+    new SongObject(
+        "Whiskey River",
+        "Willie Nelson",
+        "Heroes",
+        "Country",
+        2018,
+        "https://www.youtube.com/watch?v=oVI4dzbYXMc",
+        "https://open.spotify.com/track/6gS6XQ4OqMddkgzHNz40E5?si=Abqs74dtTqWuLVerRdvfwA"
     )
 );
 
@@ -84,9 +140,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     document.getElementById("delete").addEventListener("click", function () {
-        deleteMovie(document.getElementById("IDparmHere").innerHTML);
+        removeSong(document.getElementById("IDparmHere").innerHTML);
         createList(); // recreate li list after removing one
-        document.location.href = "index.html#ListMusic"; // go back to movie list
+        document.location.href = "index.html#ListMusic"; // back to musicList
     });
 
     // 2 sort button event methods
@@ -118,23 +174,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
         .addEventListener("click", function () {
             window.open(document.getElementById("oneSpotify").innerHTML);
         });
-
-    document
-        .getElementById("buttonSubsetComedy")
-        .addEventListener("click", function () {
-            createListSubset("Comedy"); // recreate li list after removing one
-            //document.location.href = "index.html#ListSome";  // go back to movie list
-        });
-
-    document
-        .getElementById("buttonSubsetDrama")
-        .addEventListener("click", function () {
-            createListSubset("Drama"); // recreate li list after removing one
-            //document.location.href = "index.html#ListSome";  // go back to movie list
-        });
     // end of add button events ************************************************************************
 
-    // page before show code *************************************************************************
+    
     // page before show code *************************************************************************
     $(document).on("pagebeforeshow", "#ListMusic", function (event) {
         // have to use jQuery
@@ -171,11 +213,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     // end of page before show code *************************************************************************
 });
-// end of wait until document has loaded event  *************************************************************************
-
-// next 2 functions could be combined into 1 with a little work
-// such as I could pass in a variable which said which divMovieList div it should draw
-// to, and if no value is passed in to subset too, I could just include all.
+// end of DOMContentLoaded
 
 function createList() {
     // clear prior data
@@ -230,10 +268,10 @@ function createList() {
     });
 }
 
-function deleteMovie(which) {
+function removeSong(which) {
     console.log(which);
     let arrayPointer = GetArrayPointer(which);
-    movieArray.splice(arrayPointer, 1); // remove 1 element at index
+    songArray.splice(arrayPointer, 1); // remove 1 element at index
 }
 
 // cycles thru the array to find the array element with a matching ID
